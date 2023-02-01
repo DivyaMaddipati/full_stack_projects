@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Card1,Card2} from './Cards'
+import { faker } from '@faker-js/faker'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    {/* <div>
+      <Card1
+      img = {faker.image.avatar()}/>
+      <Card2
+      img = {faker.image.avatar()}/>
+    </div> */}
+     <div class="ui two column centered grid">
+  <div class="column"></div> 
+  <div class="ui four column centered row">
+    <div class="column">
+    <Card1
+      img = {faker.image.avatar()}/>
     </div>
+    <div class="column">
+    <Card2
+      img = {faker.image.avatar()}/>
+    </div>
+  </div>
+ </div> 
+    </>
   );
 }
 
